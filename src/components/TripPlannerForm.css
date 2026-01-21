@@ -1,0 +1,257 @@
+/* TripPlannerForm.css */
+
+/* Scoped Variables for this component */
+.trip-planner-section {
+    --glass-bg: rgba(20, 20, 20, 0.7);
+    --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    --primary-gradient: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --input-bg: rgba(255, 255, 255, 0.05);
+    --input-border: 1px solid rgba(255, 255, 255, 0.1);
+
+    position: relative;
+    z-index: 20;
+    /* Ensure it sits above the video bottom fade */
+    padding: 0 1.5rem;
+    margin-top: 0;
+    padding-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.planner-card {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: var(--glass-shadow);
+    animation: slideUp 0.8s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.planner-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.planner-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, #fff, #e2e8f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Input Styles */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.input-group label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-left: 0.25rem;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #a855f7;
+    /* Purple accent */
+    pointer-events: none;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    /* Left padding for icon */
+    background: var(--input-bg);
+    border: var(--input-border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    outline: none;
+}
+
+.form-input:focus,
+.form-select:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #a855f7;
+    box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.1);
+}
+
+/* Date Inputs specific */
+.form-input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.form-input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Travelers & Preference Section */
+.travelers-group {
+    grid-column: span 1;
+}
+
+.preference-group {
+    grid-column: span 2;
+    /* Full width on desktop too? No, maybe simpler */
+}
+
+/* Make preference span full width for better layout */
+.preference-group {
+    grid-column: 1 / -1;
+    margin-top: 0.5rem;
+}
+
+.radio-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.radio-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--input-bg);
+    border: var(--input-border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.radio-card input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.radio-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Selected state for radio */
+.radio-card:has(input:checked) {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    border-color: #ec4899;
+    color: #fff;
+}
+
+/* CTA Button */
+.cta-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.btn-primary {
+    width: 100%;
+    max-width: 400px;
+    padding: 1.25rem 2rem;
+    background: var(--primary-gradient);
+    border: none;
+    border-radius: 16px;
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.5);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .trip-planner-section {
+        padding: 0 1rem;
+        margin-top: -40px;
+        /* Less overlap on mobile */
+    }
+
+    .planner-card {
+        padding: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        /* Stack everything */
+        gap: 1.25rem;
+    }
+
+    .preference-group {
+        grid-column: 1;
+    }
+
+    .radio-options {
+        grid-template-columns: 1fr;
+        /* Stack radios on very small screens? or keep 3? */
+        /* Let's try to keep them side by side but smaller, or stack if needed. */
+        /* Actually for better mobile UX, stacking or scrolling is better. */
+        /* Let's keep 3 col but reduce gap */
+        gap: 0.5rem;
+    }
+
+    .radio-card {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .radio-options {
+        grid-template-columns: 1fr;
+        /* Stack vertically on very small phones */
+    }
+}

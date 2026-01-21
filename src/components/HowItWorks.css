@@ -1,0 +1,187 @@
+/* HowItWorks.css */
+
+.how-it-works-section {
+    position: relative;
+    padding: 6rem 1.5rem 4rem;
+    background: transparent;
+}
+
+.how-it-works-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+.how-it-works-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.how-it-works-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.how-it-works-header p {
+    font-size: 1.125rem;
+    color: #a3a3a3;
+}
+
+/* Steps Grid */
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    position: relative;
+}
+
+/* Connecting Line (optional decorative element) */
+.steps-grid::before {
+    content: '';
+    position: absolute;
+    top: 80px;
+    left: 20%;
+    right: 20%;
+    height: 2px;
+    background: linear-gradient(to right,
+            transparent,
+            rgba(168, 85, 247, 0.3) 20%,
+            rgba(168, 85, 247, 0.3) 80%,
+            transparent);
+    z-index: 0;
+}
+
+/* Step Card */
+.step-card {
+    position: relative;
+    z-index: 1;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2);
+}
+
+/* Step Number */
+.step-number {
+    display: inline-block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #a855f7;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+/* Icon Container */
+.step-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.step-icon::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+.step-card:hover .step-icon::before {
+    opacity: 0.6;
+}
+
+.step-icon svg {
+    width: 36px;
+    height: 36px;
+    color: #ec4899;
+}
+
+/* Step Content */
+.step-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.step-description {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: #a3a3a3;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .how-it-works-section {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .how-it-works-header {
+        margin-bottom: 3rem;
+    }
+
+    .how-it-works-header h2 {
+        font-size: 2rem;
+    }
+
+    .steps-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .steps-grid::before {
+        display: none;
+        /* Hide connecting line on mobile */
+    }
+
+    .step-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .how-it-works-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .step-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .step-icon svg {
+        width: 32px;
+        height: 32px;
+    }
+}
