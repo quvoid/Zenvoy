@@ -6,7 +6,7 @@ const TripPlannerForm = () => {
         <section className="trip-planner-section">
             <div className="planner-card">
                 <div className="planner-header">
-                    <h2>Where to next?</h2>
+                    <h2>Start your journey</h2>
                 </div>
 
                 <form className="form-grid" onSubmit={(e) => e.preventDefault()}>

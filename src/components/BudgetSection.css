@@ -1,0 +1,96 @@
+/* BudgetSection.css */
+
+.budget-section {
+    position: sticky;
+    top: 6rem;
+    margin-top: 6rem;
+    height: fit-content;
+}
+
+.budget-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.budget-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.budget-header h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.budget-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.budget-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-name {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #a3a3a3;
+    font-size: 1rem;
+}
+
+.item-cost {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.budget-total {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(168, 85, 247, 0.1));
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-label {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.total-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Icons styling if needed */
+.budget-icon {
+    color: #a855f7;
+}
+
+@media (max-width: 1024px) {
+    .budget-section {
+        position: static;
+        margin-top: 0;
+        margin-bottom: 4rem;
+        padding: 0 1.5rem;
+    }
+}

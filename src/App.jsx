@@ -5,6 +5,16 @@ import HowItWorks from './components/HowItWorks';
 import WhyTripPlanner from './components/WhyTripPlanner';
 import Testimonials from './components/Testimonials';
 import CTABridge from './components/CTABridge';
+import TransportSection from './components/TransportSection';
+import StaySection from './components/StaySection';
+import ItinerarySection from './components/ItinerarySection';
+import BudgetSection from './components/BudgetSection';
+import BestTimeSection from './components/BestTimeSection';
+import MapSection from './components/MapSection';
+import ShareSection from './components/ShareSection';
+import ContactSupport from './components/ContactSupport';
+import LegalTrustBar from './components/LegalTrustBar';
+import Footer from './components/Footer';
 import TripPlannerForm from './components/TripPlannerForm';
 
 function App() {
@@ -56,6 +66,32 @@ function App() {
 
       {/* Trip Planning Form Section */}
       <TripPlannerForm />
+
+      {/* Transport Options Section */}
+      <TransportSection />
+
+      {/* Stay Selection Section */}
+      <StaySection />
+
+      {/* Split Layout: Itinerary & Budget */}
+      <div className="planner-layout">
+        <ItinerarySection />
+        <BudgetSection />
+      </div>
+
+      {/* Best Time to Travel Section */}
+      <BestTimeSection />
+
+      {/* Map Preview Section */}
+      <MapSection />
+
+      {/* Save & Share Section */}
+      <ShareSection />
+
+      {/* Final Sections */}
+      <ContactSupport />
+      <LegalTrustBar />
+      <Footer />
     </div>
   );
 }

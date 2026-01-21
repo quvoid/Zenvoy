@@ -116,3 +116,24 @@ section {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* Split Layout for Itinerary & Budget */
+.planner-layout {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    align-items: start;
+}
+
+@media (max-width: 1024px) {
+    .planner-layout {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
+        /* Budget below itinerary on mobile */
+    }
+}
