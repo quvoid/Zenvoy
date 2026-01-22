@@ -1,4 +1,4 @@
-import { MapPin, Calendar, Users, Zap, DollarSign, Scale } from 'lucide-react';
+import { MapPin, Calendar, Users, Zap, IndianRupee, Scale } from 'lucide-react';
 import './TripPlannerForm.css';
 
 const TripPlannerForm = () => {
@@ -74,9 +74,19 @@ const TripPlannerForm = () => {
                         </div>
                     </div>
 
-                    {/* Empty div to balance grid if needed, or span travelers fill? 
-               Let's leave travelers 1 col, and preferences will take new row full width.
-           */}
+                    {/* Budget Input */}
+                    <div className="input-group budget-group">
+                        <label>Total Budget</label>
+                        <div className="input-wrapper">
+                            <IndianRupee className="input-icon" />
+                            <input
+                                type="number"
+                                className="form-input"
+                                placeholder="Ex: 5000"
+                                min="0"
+                            />
+                        </div>
+                    </div>
 
                     {/* Preferences */}
                     <div className="preference-group">
@@ -85,7 +95,7 @@ const TripPlannerForm = () => {
                             <label className="radio-card">
                                 <input type="radio" name="preference" value="cheapest" />
                                 <div className="flex items-center gap-2">
-                                    <DollarSign size={16} />
+                                    <IndianRupee size={16} />
                                     <span>Cheapest</span>
                                 </div>
                             </label>

@@ -16,7 +16,7 @@ const ContactSupport = () => {
                             <Mail size={24} />
                         </div>
                         <h3>Email Support</h3>
-                        <p>help@tripplanner.io</p>
+                        <p>omkarrakshe2808@gmail.com</p>
                     </div>
 
                     <div className="contact-card">
@@ -32,7 +32,7 @@ const ContactSupport = () => {
                             <Phone size={24} />
                         </div>
                         <h3>Phone Support</h3>
-                        <p>+1 (555) 123-4567</p>
+                        <p>+91 8767733636</p>
                     </div>
                 </div>
 

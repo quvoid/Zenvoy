@@ -1,55 +1,130 @@
+import { useState } from 'react';
 import { MapPin, Star, Wifi, Coffee, Utensils } from 'lucide-react';
 import './StaySection.css';
 
 const mockStayData = [
     {
         id: 1,
-        name: 'Grand Luxury Suites',
-        image: '/hotel-luxury.png',
-        rating: 4.9,
-        reviews: 128,
-        location: 'Downtown City Center',
-        amenities: ['Free WiFi', 'Spa', 'Pool', 'Gym'],
-        pricePerNight: 250,
-        totalPrice: 1250,
-        currency: '$'
+        name: 'Backpacker\'s Haven',
+        image: '/hotel-boutique.png', // Using existing placeholder
+        rating: 4.2,
+        reviews: 350,
+        location: 'Old Town District',
+        amenities: ['Shared Kitchen', 'Free WiFi', 'Lounge'],
+        pricePerNight: 800,
+        totalPrice: 4000,
+        currency: '₹'
     },
     {
         id: 2,
-        name: 'Oceanview Resort',
-        image: '/hotel-resort.png',
-        rating: 4.8,
-        reviews: 85,
-        location: 'Coastal Beachfront',
-        amenities: ['Ocean View', 'Private Beach', 'Bar', 'Breakfast'],
-        pricePerNight: 320,
-        totalPrice: 1600,
-        currency: '$'
+        name: 'Cozy City Apartment',
+        image: '/hotel-luxury.png',
+        rating: 4.5,
+        reviews: 120,
+        location: 'City Center',
+        amenities: ['City View', 'Kitchen', 'WiFi', 'Washer'],
+        pricePerNight: 2500,
+        totalPrice: 12500,
+        currency: '₹'
     },
     {
         id: 3,
-        name: 'Boutique Loft',
-        image: '/hotel-boutique.png',
+        name: 'Green Valley Resort',
+        image: '/hotel-resort.png',
         rating: 4.7,
-        reviews: 210,
-        location: 'Historic District',
-        amenities: ['City View', 'Kitchen', 'Workspace', 'Pet Friendly'],
-        pricePerNight: 180,
-        totalPrice: 900,
-        currency: '$'
+        reviews: 180,
+        location: 'Hill Station',
+        amenities: ['Mountain View', 'Pool', 'Breakfast', 'Spa'],
+        pricePerNight: 5500,
+        totalPrice: 27500,
+        currency: '₹'
+    },
+    {
+        id: 4,
+        name: 'Grand Luxury Suites',
+        image: '/hotel-luxury.png',
+        rating: 4.9,
+        reviews: 89,
+        location: 'Downtown City Center',
+        amenities: ['Spa', 'Infinity Pool', 'Gym', 'Valet'],
+        pricePerNight: 12000,
+        totalPrice: 60000,
+        currency: '₹'
+    },
+    {
+        id: 5,
+        name: 'Seaside Paradise',
+        image: '/hotel-resort.png',
+        rating: 4.8,
+        reviews: 240,
+        location: 'Coastal Beachfront',
+        amenities: ['Private Beach', 'Bar', 'Water Sports'],
+        pricePerNight: 18500,
+        totalPrice: 92500,
+        currency: '₹'
+    },
+    {
+        id: 6,
+        name: 'Urban Loft Stay',
+        image: '/hotel-boutique.png',
+        rating: 4.4,
+        reviews: 410,
+        location: 'Business District',
+        amenities: ['Workspace', 'High-Speed WiFi', 'Cafe'],
+        pricePerNight: 3200,
+        totalPrice: 16000,
+        currency: '₹'
     }
 ];
 
 const StaySection = () => {
+    const [sortBy, setSortBy] = useState('recommended');
+
+    const getSortedStays = () => {
+        let sorted = [...mockStayData];
+        switch (sortBy) {
+            case 'cheapest':
+                return sorted.sort((a, b) => a.pricePerNight - b.pricePerNight);
+            case 'rated':
+                return sorted.sort((a, b) => b.rating - a.rating);
+            case 'reviews':
+                return sorted.sort((a, b) => b.reviews - a.reviews);
+            default:
+                return sorted;
+        }
+    };
+
+    const sortedStays = getSortedStays();
+
     return (
         <section className="stay-section">
             <div className="stay-container">
                 <div className="stay-header">
                     <h2>Choose Your Stay</h2>
+                    <div className="stay-filters">
+                        <button
+                            className={`filter-btn ${sortBy === 'cheapest' ? 'active' : ''}`}
+                            onClick={() => setSortBy('cheapest')}
+                        >
+                            Cheapest
+                        </button>
+                        <button
+                            className={`filter-btn ${sortBy === 'rated' ? 'active' : ''}`}
+                            onClick={() => setSortBy('rated')}
+                        >
+                            Highest Rated
+                        </button>
+                        <button
+                            className={`filter-btn ${sortBy === 'reviews' ? 'active' : ''}`}
+                            onClick={() => setSortBy('reviews')}
+                        >
+                            Most Reviewed
+                        </button>
+                    </div>
                 </div>
 
                 <div className="stay-grid">
-                    {mockStayData.map((stay) => (
+                    {sortedStays.map((stay) => (
                         <div key={stay.id} className="stay-card">
                             <div className="stay-image-container">
                                 <img src={stay.image} alt={stay.name} className="stay-image" />
