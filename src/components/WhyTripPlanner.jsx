@@ -29,7 +29,7 @@ const WhyTripPlanner = () => {
         <section className="why-section">
             <div className="why-container">
                 <div className="why-header">
-                    <h2>Why TripPlanner?</h2>
+                    <h2>Why Zenvoy ?</h2>
                     <p>Smarter planning. Better journeys.</p>
                 </div>
 

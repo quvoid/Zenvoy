@@ -27,14 +27,14 @@ function App() {
             <div className="flex items-center gap-8">
               <div className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-lg flex items-center justify-center shadow-lg shadow-purple-500/20">
-                  <span className="text-white font-bold text-sm">T</span>
+                  <span className="text-white font-bold text-sm">Z</span>
                 </div>
-                <span className="font-semibold text-lg tracking-wide">TripPlanner</span>
+                <span className="font-semibold text-lg tracking-wide">Zenvoy</span>
               </div>
               <div className="hidden md:flex items-center gap-6 text-sm font-medium">
                 <a href="#" className="text-gray-300 hover:text-white transition-colors hover:shadow-glow">Features</a>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">Destinations</a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Pricing</a>
+                <a href="#" className="text-gray-300 hover:text-white transition-colors">Itinerary</a>
               </div>
             </div>
             <div className="flex items-center gap-4">

@@ -3,9 +3,6 @@
 > **Built with AI Vibecoding** ✨  
 > A premium, cinematic travel planning interface designed to inspire and organize your next adventure.
 
-![TripPlanner Hero](public/hero-screenshot.png) 
-*(Note: You might want to add a screenshot here manually if you have one, or I can use one of the generated ones if moved to public)*
-
 ## 🌟 About
 
 TripPlanner is a modern SaaS landing page and interactive prototype for a travel itinerary application. It features a dark, glassmorphism-heavy aesthetic ("Vibecoding") that prioritizes visual impact and smooth user experience.
