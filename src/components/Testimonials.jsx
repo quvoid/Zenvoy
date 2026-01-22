@@ -20,6 +20,24 @@ const Testimonials = () => {
             author: "Emma",
             role: "Travel Blogger",
             avatar: "E"
+        },
+        {
+            text: "Found hidden gems I would have never discovered otherwise.",
+            author: "Michael",
+            role: "Photographer",
+            avatar: "M"
+        },
+        {
+            text: "The budget tracking feature is a lifesaver for long trips.",
+            author: "Lisa",
+            role: "Solo Traveler",
+            avatar: "L"
+        },
+        {
+            text: "Seamless experience from booking to itinerary management.",
+            author: "David",
+            role: "Adventure Seeker",
+            avatar: "D"
         }
     ];
 

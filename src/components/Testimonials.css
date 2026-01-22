@@ -4,6 +4,10 @@
     padding: 6rem 1.5rem;
     position: relative;
     overflow: hidden;
+    background-color: #000;
+    /* Ensure solid background */
+    z-index: 20;
+    /* Sit on top of sticky WhyTripPlanner */
 }
 
 .testimonials-container {
@@ -47,8 +51,8 @@
 
 .testimonials-track {
     display: flex;
-    gap: 2rem;
-    animation: scroll 30s linear infinite;
+    /* gap: 2rem; removed for seamless loop accuracy */
+    animation: scroll 40s linear infinite;
     width: fit-content;
 }
 
@@ -90,6 +94,8 @@
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
     position: relative;
     flex-shrink: 0;
+    margin-right: 2rem;
+    /* Replaces gap for seamless scrolling */
 }
 
 .testimonial-card:hover {
