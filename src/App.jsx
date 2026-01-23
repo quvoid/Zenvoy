@@ -32,9 +32,9 @@ function App() {
                 <span className="font-semibold text-lg tracking-wide">Zenvoy</span>
               </div>
               <div className="hidden md:flex items-center gap-6 text-sm font-medium">
-                <a href="#" className="text-gray-300 hover:text-white transition-colors hover:shadow-glow">Features</a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Destinations</a>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">Itinerary</a>
+                <a href="#features" className="text-gray-300 hover:text-white transition-colors hover:shadow-glow">Features</a>
+                <a href="#destinations" className="text-gray-300 hover:text-white transition-colors">Destinations</a>
+                <a href="#itinerary" className="text-gray-300 hover:text-white transition-colors">Itinerary</a>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -53,7 +53,7 @@ function App() {
       <VideoHero />
 
       {/* How It Works Section */}
-      <HowItWorks />
+      <HowItWorks id="features" />
 
       {/* Why TripPlanner Section */}
       <WhyTripPlanner />
@@ -75,7 +75,7 @@ function App() {
 
       {/* Split Layout: Itinerary & Budget */}
       <div className="planner-layout">
-        <ItinerarySection />
+        <ItinerarySection id="itinerary" />
         <BudgetSection />
       </div>
 
@@ -83,7 +83,7 @@ function App() {
       <BestTimeSection />
 
       {/* Map Preview Section */}
-      <MapSection />
+      <MapSection id="destinations" />
 
       {/* Save & Share Section */}
       <ShareSection />

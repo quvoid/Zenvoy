@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { MapPin, ArrowRight, Calendar, Route, ArrowDown } from 'lucide-react';
 import './HowItWorks.css';
 
-const HowItWorks = () => {
+const HowItWorks = ({ id }) => {
     const sectionRef = useRef(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -56,6 +56,7 @@ const HowItWorks = () => {
 
     return (
         <section
+            id={id}
             ref={sectionRef}
             className={`how-it-works-section ${isVisible ? 'animate-in' : ''}`}
         >

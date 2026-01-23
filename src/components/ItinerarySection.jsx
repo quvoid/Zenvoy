@@ -75,7 +75,7 @@ const mockItineraryData = [
     }
 ];
 
-const ItinerarySection = () => {
+const ItinerarySection = ({ id }) => {
     const [expandedDay, setExpandedDay] = useState(1);
 
     const toggleDay = (dayId) => {
@@ -83,7 +83,7 @@ const ItinerarySection = () => {
     };
 
     return (
-        <section className="itinerary-section">
+        <section id={id} className="itinerary-section">
             <div className="itinerary-container">
                 <div className="itinerary-header">
                     <h2>Your Travel Itinerary</h2>

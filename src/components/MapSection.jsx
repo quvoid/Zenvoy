@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { MapPin, Navigation, Building, Ticket, Plus, Minus, Train, Plane, Hotel } from 'lucide-react';
 import './MapSection.css';
 
-const MapSection = () => {
+const MapSection = ({ id }) => {
     const [activeLayers, setActiveLayers] = useState(['route', 'hotels']);
 
     const toggleLayer = (layer) => {
@@ -14,7 +14,7 @@ const MapSection = () => {
     };
 
     return (
-        <section className="map-section">
+        <section id={id} className="map-section">
             <div className="map-container">
                 <div className="map-header">
                     <h2>Trip Route Visualization</h2>
