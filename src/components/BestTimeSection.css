@@ -1,0 +1,239 @@
+/* BestTimeSection.css */
+
+.best-time-section {
+    padding: 6rem 1.5rem;
+    position: relative;
+}
+
+.best-time-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.best-time-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.best-time-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Season Cards Grid */
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.season-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.season-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2);
+}
+
+.season-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.season-badge.peak {
+    background: rgba(236, 72, 153, 0.2);
+    border-color: rgba(236, 72, 153, 0.5);
+    color: #fce7f3;
+}
+
+.season-badge.moderate {
+    background: rgba(168, 85, 247, 0.2);
+    border-color: rgba(168, 85, 247, 0.5);
+    color: #f3e8ff;
+}
+
+.season-badge.budget {
+    background: rgba(34, 197, 94, 0.2);
+    border-color: rgba(34, 197, 94, 0.5);
+    color: #dcfce7;
+}
+
+.season-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.season-months {
+    font-size: 0.875rem;
+    color: #a3a3a3;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.season-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-value {
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.travel-tip {
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+    font-size: 0.875rem;
+    color: #94a3b8;
+    font-style: italic;
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Monthly Timeline */
+.monthly-timeline-container {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+}
+
+.timeline-header {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.months-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem;
+}
+
+.month-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+}
+
+.month-bar {
+    width: 8px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.month-bar-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #a3a3a3;
+    border-radius: 4px;
+}
+
+/* Rating Styles */
+.month-item.best .month-bar-fill {
+    background: linear-gradient(to top, #ec4899, #a855f7);
+    height: 90%;
+}
+
+.month-item.good .month-bar-fill {
+    background: rgba(168, 85, 247, 0.7);
+    height: 60%;
+}
+
+.month-item.mixed .month-bar-fill {
+    background: rgba(255, 255, 255, 0.2);
+    height: 30%;
+}
+
+.month-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #a3a3a3;
+}
+
+.month-item:hover .month-label {
+    color: #ffffff;
+}
+
+.month-item:hover .month-bar {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+@media (max-width: 1024px) {
+    .season-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .best-time-section {
+        padding: 4rem 1rem;
+    }
+
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .months-grid {
+        grid-template-columns: repeat(6, 1fr);
+        row-gap: 2rem;
+    }
+}
