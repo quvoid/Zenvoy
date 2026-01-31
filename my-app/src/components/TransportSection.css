@@ -1,0 +1,412 @@
+/* TransportSection.css */
+
+.transport-section {
+    padding: 6rem 1.5rem;
+    position: relative;
+}
+
+.transport-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.transport-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.transport-header h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: linear-gradient(to right, #ffffff, #e2e8f0);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Tabs */
+.transport-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2.5rem;
+}
+
+.tab-button {
+    padding: 0.875rem 2rem;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #a3a3a3;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+    border-color: rgba(168, 85, 247, 0.3);
+    color: #e2e8f0;
+}
+
+.tab-button.active {
+    background: linear-gradient(135deg, rgba(236, 72, 153, 0.2) 0%, rgba(168, 85, 247, 0.2) 100%);
+    border-color: rgba(168, 85, 247, 0.5);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+}
+
+/* Transport List */
+.transport-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Transport Card */
+.transport-card {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 1.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+
+.transport-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(168, 85, 247, 0.5);
+    box-shadow: 0 12px 40px rgba(168, 85, 247, 0.2);
+}
+
+.transport-card.cheapest {
+    border-color: rgba(34, 197, 94, 0.5);
+}
+
+.transport-card.cheapest::before {
+    content: 'BEST PRICE';
+    position: absolute;
+    top: -10px;
+    left: 1.5rem;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+/* Card Content Layout */
+.transport-info {
+    flex: 1;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2rem;
+}
+
+.transport-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.transport-type {
+    font-size: 0.875rem;
+    color: #a3a3a3;
+}
+
+/* Time Section */
+.transport-times {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.time-block {
+    text-align: center;
+}
+
+.time {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.time-label {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.time-separator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    color: #a3a3a3;
+}
+
+.duration-line {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #a3a3a3, transparent);
+    position: relative;
+}
+
+.duration-line::before {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    background: #a3a3a3;
+    border-radius: 50%;
+}
+
+.duration-text {
+    font-size: 0.75rem;
+    white-space: nowrap;
+}
+
+/* Details Section */
+.transport-details {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.detail-item {
+    text-align: center;
+}
+
+.detail-value {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 0.25rem;
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    color: #a3a3a3;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Price and Action */
+.transport-action {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+}
+
+.transport-price {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.select-button {
+    padding: 0.75rem 1.75rem;
+    background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(236, 72, 153, 0.4);
+    white-space: nowrap;
+}
+
+.select-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(236, 72, 153, 0.5);
+}
+
+.select-button:active {
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .transport-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .transport-times {
+        justify-content: space-between;
+    }
+
+    .transport-details {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .transport-section {
+        padding: 4rem 1rem;
+    }
+
+    .transport-header h2 {
+        font-size: 2rem;
+    }
+
+    .transport-card {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 1.5rem;
+    }
+
+    .transport-info {
+        gap: 1rem;
+    }
+
+    .transport-times {
+        gap: 1rem;
+    }
+
+    .duration-line {
+        width: 60px;
+    }
+
+    .transport-action {
+        align-items: stretch;
+    }
+
+    .select-button {
+        width: 100%;
+    }
+
+    .tab-button {
+        flex: 1;
+        padding: 0.75rem 1rem;
+    }
+}
+
+/* Placeholder State */
+.transport-placeholder,
+.transport-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    background: rgba(20, 20, 20, 0.4);
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.placeholder-icon {
+    color: #a3a3a3;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.transport-placeholder p,
+.transport-loading p {
+    color: #a3a3a3;
+    font-size: 1rem;
+}
+
+.transport-subtitle {
+    color: #a3a3a3;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Selected State */
+.transport-card.selected {
+    border-color: #22c55e;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+}
+
+.select-button.selected {
+    background: #22c55e;
+    box-shadow: 0 4px 20px rgba(34, 197, 94, 0.4);
+}
+
+/* Transport Tag */
+.transport-tag {
+    position: absolute;
+    top: -10px;
+    left: 1.5rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+}
+
+.transport-tag.best-price {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: white;
+}
+
+.transport-tag.fastest,
+.transport-tag.premium {
+    background: linear-gradient(135deg, #ec4899, #a855f7);
+    color: white;
+}
+
+.transport-tag.non-stop {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+}
+
+/* Selected Badge */
+.selected-badge {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.5);
+    border-radius: 8px;
+    color: #22c55e;
+    font-size: 0.875rem;
+    display: inline-block;
+}
+
+/* No Options State */
+.no-options {
+    text-align: center;
+    padding: 3rem;
+    color: #a3a3a3;
+}
+
+/* Spin Animation */
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
