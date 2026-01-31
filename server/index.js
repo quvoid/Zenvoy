@@ -1,4 +1,5 @@
 const express = require('express');
+// Server restart trigger
 const cors = require('cors');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/trips', require('./routes/tripRoutes'));
+app.use('/api/planning', require('./routes/planningRoutes'));
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
